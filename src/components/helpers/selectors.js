@@ -12,4 +12,16 @@ export function getAppointmentsForDay(state, day) {
     appointmentArray.push(state.appointments[appointment]);
   }
   return appointmentArray;
+
+}
+
+// return a new object containing the interview data 
+export function getInterview(state, interview) {
+  if (!interview) {
+    return null;
+  }
+  return {
+    student: interview.student,
+    interviewer: state.interviewers[interview.interviewer]
+  };
 }
