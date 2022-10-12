@@ -19,9 +19,6 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 
-
-
-
 storiesOf("Button", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -234,8 +231,8 @@ storiesOf("Appointment", module)
       <Appointment
         id={1}
         time="4pm"
-        interview={{ student: "Lydia Miller-Jones", interviewer}}
+        interview={{ student: "Lydia Miller-Jones", interviewer }}
       />
       <Appointment time="5pm" />
     </Fragment>
-  ))
+  ));
