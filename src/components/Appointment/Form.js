@@ -22,13 +22,14 @@ export default function Form(props) {
   //validate input
   const validate = () => {
     if (student === "") {
-      setError("Please add student name \xa0 ↑↑↑");
+      setError("Student name cannot be blank \xa0 ↑↑↑");
       return;
     }
     if (interviewer === null) {
       setError("Please select an interviewer \xa0 ↓↓↓");
       return;
     }
+    setError("");
     props.onSave(student, interviewer);
   };
 
