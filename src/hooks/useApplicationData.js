@@ -7,7 +7,7 @@ export default function useApplicationData() {
     days: [],
     appointments: {}
   });
-  console.log("STATE: ", state);
+
   const setDay = day => setState({ ...state, day });
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function useApplicationData() {
       [id]: appointment
     };
     const days = updateSpots(state, appointments)
-    console.log("DAY:",days)
+    
     return axios.put(`/api/appointments/${id}`, { interview })
       .then(() => {
         setState({ ...state, appointments, days });
