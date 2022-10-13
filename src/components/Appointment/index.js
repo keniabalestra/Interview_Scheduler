@@ -1,5 +1,5 @@
 import React from "react";
-import 'components/Appointment/styles.scss';
+import './styles.scss';
 
 import useVisualMode from "hooks/useVisualMode";
 import Header from "./Header";
