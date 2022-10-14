@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 import 'components/Appointment/index.js';
 import "components/Application.scss";
@@ -9,7 +8,7 @@ import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "./he
 import useApplicationData from "hooks/useApplicationData";
 
 
-export default function Application(props) {
+export default function Application() {
   const {
     state,
     setDay,
@@ -33,7 +32,6 @@ export default function Application(props) {
         interviewers={dailyInterviewers}
         bookInterview={bookInterview}
         cancelInterview={cancelInterview}
-
       />
     );
   });
@@ -61,10 +59,8 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-
         {schedule}
         <Appointment key="last" time="5pm" />
-
       </section>
     </main>
   );

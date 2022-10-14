@@ -12,7 +12,6 @@ export default function DayList(props) {
         setDay={props.onChange}
         selected={day.name === props.value} />
     </ul>;
-
   });
   return selectedDay;
 };
